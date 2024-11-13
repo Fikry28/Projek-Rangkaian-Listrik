@@ -16,7 +16,7 @@ Deskripsi project
 
 ## Fitur
 
-- Fitur 1
+- Fitur Menghitung Jumlah Hambatan
 - Fitur 2
 - Fitur 3
 
