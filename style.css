@@ -1,1 +1,13 @@
-. div
+body{
+    background-color:black;
+    font-family: sans-serif;
+
+}
+h2{
+    color: #ffa31a;
+
+}
+
+h3{
+    color: #ffa31a
+}
