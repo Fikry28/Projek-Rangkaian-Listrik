@@ -8,30 +8,20 @@
 </head>
 
 <body>
-	<h2 align ="center">KALKULATOR RANGKAIAN LISTRIK SEDERHANA</h2>
-	<h3 align ="center">JENIS RANGKAIAN</h3>
-	<table align="center" cellspacing="50">	
-		<tr>
-			<td align="center">
-	  				<img src="Gambar/seri.jpeg"
-	  					alt="Rangkaian Seri"
-						title="Rangkaian Seri"
-						height="200">
-						
-				</a><p><font size="5">Rangkaian Seri</font></p>
-			</td>
-			<td align="center">
-				<a href="Rangkaian Pararel.html">
-	  				<img src="Gambar/pararel.jpg"
-						alt="Rangkaian Pararel"
-						title="Rangkaian Pararel"
-						height="200">
-						
-				</a><p><font size="5">Rangkaian Pararel</font></p>
-			</td>
-		</tr>
-	</table>
-	<br><br><br><br>
-	<h3 align="center">"Pilih Rangkaian dengan Klik Gambar"</h3>
+    <h2>Form Perhitungan</h2>
+    <label for="jumlahinput">Pilih Jumlah Hambatan</label>
+    <select id="jumlahinput" onchange="generateInput()">
+        <option value=""> --Pilih Jumlah--" </option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+</select>
+    <div id="InputContainer">
+
+    </div>
+    <button id="hasil" onclick="hitunghasil()">Hitung Hasil</button>
+    <p id="output"></p>       
 </body>
 </html>
