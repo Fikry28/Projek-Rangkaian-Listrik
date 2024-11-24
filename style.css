@@ -1,13 +1,69 @@
+HEAD
+*, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
 body{
-    background-color:black;
+    background:#f4f4f4;  
     font-family: sans-serif;
+     
 
 }
+
+nav {
+    background:#0c2741;
+    display:flex ;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 2rem ;
+    list-style: none;
+}
+
+nav div img{
+    width: 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family:'Segoe UI',sans-serif;
+    color:whitesmoke ;
+    font-weight: 600;
+    padding: 2px 0;
+    transition: all;
+    transition-duration: 300ms;
+    border-bottom: 2px solid #dd7c0600;
+}
+
+nav ul li a:hover {
+    color: #dd7c06;
+    border-bottom: 2px solid #dd7c06;
+}
+
 h2{
-    color: #ffa31a;
+    color:black;
+    padding: 30px;
+    font-family: 'Segoe UI',sans-serif;
 
 }
 
 h3{
-    color: #ffa31a
+    color: black;
+    padding: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color:#f4f4f4;
+    font-family: sans-serif;
+
 }
