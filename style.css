@@ -1,5 +1,5 @@
 HEAD
-*, html {
+, html {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -8,12 +8,13 @@ HEAD
 
 
 body{
-    background:#f4f4f4;  
+    background-color:#ffbb00;  
     font-family: sans-serif;
-     
 
 }
-
+h2{
+    color: #1aee07;
+}
 nav {
     background:#0c2741;
     display:flex ;
@@ -62,8 +63,3 @@ h3{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body{
-    background-color:#f4f4f4;
-    font-family: sans-serif;
-
-}
