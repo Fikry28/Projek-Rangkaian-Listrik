@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 
+<html lang="id">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Kalkulator Rangkaian</title>
-    <script src="../Projek-Rangkaian-Listrik/algo.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kalkulator Rangkaian</title>
+    <script src="algo.js"></script>
 </head>
 
 <body>
     <h2>Form Perhitungan</h2>
+    
+    <!-- Dropdown untuk memilih jumlah hambatan -->
     <label for="jumlahinput">Pilih Jumlah Hambatan</label>
     <select id="jumlahinput" onchange="generateInput()">
-        <option value=""> --Pilih Jumlah--" </option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-</select>
-    <div id="InputContainer">
+        <option value=""> --Pilih Jumlah-- </option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    
+    <!-- Container untuk menampilkan input hambatan -->
+    <div id="InputContainer"></div>
 
-    </div>
-    <button id="hasil" onclick="hitunghasil()">Hitung Hasil</button>
+    <!-- Pilihan jenis rangkaian -->
+  
+    <!-- Tombol untuk menghitung hasil -->
+    <button onclick="hitungHasil()">Hitung Hasil</button>
+    
+    <!-- Menampilkan output hasil -->
     <p id="output"></p>       
+
 </body>
 </html>

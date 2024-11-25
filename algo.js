@@ -1,16 +1,38 @@
+// Fungsi untuk membuat input hambatan berdasarkan jumlah yang dipilih
+function generateInput() {
+    var jumlah = document.getElementById("jumlahinput").value;  // Ambil jumlah hambatan yang dipilih
+    var container = document.getElementById("InputContainer");
+    container.innerHTML = '';  // Kosongkan container input sebelumnya
+    
+    // Membuat input untuk hambatan sesuai jumlah yang dipilih
+    for (var i = 1; i <= jumlah; i++) {
+        var label = document.createElement("label");
+        label.innerHTML = "Hambatan " + i + ": ";
+        
+        var input = document.createElement("input");
+        input.type = "number";
+        input.id = "R" + i;  // Set ID untuk input hambatan
+        input.placeholder = "Masukkan nilai hambatan " + i;
+        
+        container.appendChild(label);
+        container.appendChild(input);
+        container.appendChild(document.createElement("br"));
+    }
+}
+
+// Fungsi untuk menghitung hasil berdasarkan input hambatan
 function hitungHasil() {
     var jumlah = document.getElementById("jumlahinput").value;
     var totalResistansi = 0;
     var hasil = 0;
-    
+
     // Cek apakah jumlah hambatan dipilih
     if (jumlah === "") {
         alert("Pilih jumlah hambatan terlebih dahulu.");
         return;
     }
 
-    // Menentukan jenis rangkaian (seri atau paralel)
-    var jenisRangkaian = document.querySelector('input[name="jenisRangkaian"]:checked').value;
+  
 
     // Menghitung total resistansi berdasarkan rangkaian
     for (var i = 1; i <= jumlah; i++) {
@@ -19,20 +41,13 @@ function hitungHasil() {
             alert("Masukkan nilai hambatan yang valid.");
             return;
         }
-
-        if (jenisRangkaian === "seri") {
             totalResistansi += R;  // Penambahan untuk rangkaian seri
-        } else if (jenisRangkaian === "paralel") {
-            totalResistansi += 1 / R;  // Penambahan untuk rangkaian paralel
-        }
+       
     }
 
-    // Menampilkan hasil berdasarkan jenis rangkaian
-    var output = document.getElementById("output");
-    if (jenisRangkaian === "seri") {
-        output.innerHTML = `Total Hambatan dalam Rangkaian Seri: ${totalResistansi} Ohm`;
-    } else if (jenisRangkaian === "paralel") {
-        totalResistansi = 1 / totalResistansi;
-        output.innerHTML = `Total Hambatan dalam Rangkaian Paralel: ${totalResistansi} Ohm`;
-    }
+   
+
+    // Menampilkan hasil
+    hasil = totalResistansi.toFixed(2);  // Menampilkan dengan dua angka di belakang koma
+    document.getElementById("output").innerHTML = "Total Resistansi: " + hasil + " Ohm";
 }
