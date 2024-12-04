@@ -26,8 +26,22 @@
     <!-- Container untuk menampilkan input hambatan -->
     <div id="InputContainer"></div>
 
-    <!-- Pilihan jenis rangkaian -->
-  
+    <!-- Pilihan Arus/Tegangan -->
+    <h2>Pilih Ingin mencari Arus atau Tegangan</h2>
+    <form id="radioForm">
+        <label>
+            <input type="radio" name="Hitung" value="Arus"> Arus
+        </label> 
+        <label>
+            <input type="radio" name="Hitung" value="Tegangan"> Tegangan
+        </label>
+        <div id="extraInput">
+            <label for="details">Masukkan Tegangan: </label>
+            <input type="text" id="details" placeholder="Masukkan detail Anda">
+        </div>
+    </form>
+    <button id="submitButton">Submit</button>
+    <p id="result"></p>
     <!-- Tombol untuk menghitung hasil -->
     <button onclick="hitungHasil()">Hitung Hasil</button>
     
