@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculectric</title>
+    <script src=" algo.js"></script>
+</head>
+
+<body>
+    <h2>Form Perhitungan</h2> <a href="struktur web.html">Beranda</a>
+    
+    <!-- Dropdown untuk memilih jumlah hambatan -->
+    <label for="jumlahinput">Pilih Jumlah Hambatan</label>
+    <select id="jumlahinput" onchange="generateInput()">
+        <option value=""> --Pilih Jumlah-- </option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    
+    <!-- Container untuk menampilkan input hambatan -->
+    <div id="InputContainer"></div>
+
+    <!-- Pilih arus/tegangan -->
+  <input type="radio" id="arus" name="parameter" value="I" onchange="toggleInput()">
+<label for="arus">Arus (I)</label><br>
+<input type="radio" id="tegangan" name="parameter" value="V" onchange="toggleInput()">
+<label for="tegangan">Tegangan (V)</label><br>
+
+<!-- Input untuk Arus -->
+<div id="inputArus" style="display: none;">
+    <label for="nilaiArus">Masukkan Arus (I): </label>
+    <input type="number" id="nilaiArus" placeholder="Masukkan nilai arus (I)">
+</div>
+
+<!-- Input untuk Tegangan -->
+<div id="inputTegangan" style="display: none;">
+    <label for="nilaiTegangan">Masukkan Tegangan (V): </label>
+    <input type="number" id="nilaiTegangan" placeholder="Masukkan nilai tegangan (V)">
+    <!-- Tombol untuk menghitung hasil -->
+    <button onclick="hitungHasil()">Hitung Hasil</button>
+    
+    <!-- Menampilkan output hasil -->
+    <p id="output"></p>       
+
+</body>
+</html>
