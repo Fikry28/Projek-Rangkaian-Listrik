@@ -44,7 +44,51 @@ function hitungHasil() {
             totalResistansi += R;  // Penambahan untuk rangkaian seri
        
     }
+    // Ambil elemen-elemen yang dibutuhkan
+const form = document.getElementById("radioForm");
+const submitButton = document.getElementById("submitButton");
+const result = document.getElementById("result");
+const extraInput = document.getElementById("extraInput");
+const detailsInput = document.getElementById("details");
 
+// Tambahkan event listener untuk tombol submit
+submitButton.addEventListener("click", function () {
+    // Ambil semua input dengan name "color"
+    const selectedOption = form.querySelector('input[name="Hitung"]:checked');
+    
+    // Cek apakah ada opsi yang dipilih
+    if (selectedOption) {
+        result.textContent = `Anda memilih  ${selectedOption.value}`;
+    } else {
+        result.textContent = "Silakan pilih Arus/Tegangan terlebih dahulu!";
+    }});
+    // Tambahkan event listener untuk radio button
+    form.addEventListener("change", function () {
+        const selectedOption = form.querySelector('input[name="category"]:checked');
+
+        // Tampilkan input tambahan jika salah satu radio dipilih
+        if (selectedOption) {
+            extraInput.style.display = "block";
+        }
+    });
+
+    // Event listener untuk tombol submit
+    submitButton.addEventListener("click", function () {
+        const selectedOption = form.querySelector('input[name="Hitung"]:checked');
+        const details = detailsInput.value;
+ // Aktifkan input detail jika salah satu radio dipilih
+ if (selectedOption) {
+    detailsInput.disabled = false;
+ }
+        if (selectedOption && details) {
+            result.textContent = `Anda memilih kategori: ${selectedOption.value} dengan detail: ${details}`;
+        } else if (!selectedOption) {
+            result.textContent = "Silakan pilih kategori terlebih dahulu!";
+        } else {
+            result.textContent = "Silakan masukkan detail tambahan!";
+        }
+    });
+    
    
 
     // Menampilkan hasil
