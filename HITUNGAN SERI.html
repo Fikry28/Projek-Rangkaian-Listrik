@@ -1,53 +1,115 @@
 <!DOCTYPE html>
-
 <html lang="id">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculectric</title>
-    <script src=" algo.js"></script>
+    <link rel="stylesheet" href="style seri.css">
+    <script src="algo.js"></script>
 </head>
 
 <body>
-    <h2>Form Perhitungan</h2> <a href="struktur web.html">Beranda</a>
-    
-    
-    <!-- Dropdown untuk memilih jumlah hambatan -->
-    <label for="jumlahinput">Pilih Jumlah Hambatan</label>
-    <select id="jumlahinput" onchange="generateInput()">
-        <option value=""> --Pilih Jumlah-- </option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-    </select>
-    
-    <!-- Container untuk menampilkan input hambatan -->
-    <div id="InputContainer"></div>
+    <!-- Navbar -->
+    <nav>
+        <div class="jeki">
+            <img src="Logo TE.png" alt="Logo TE">
+        </div>
+        <ul>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Rangkaian Listrik</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+    </nav>
 
-    <!-- Pilih arus/tegangan -->
-<input type="radio" id="arus" name="parameter" value="I" onchange="toggleInput()">
-<label for="arus">Arus (I)</label><br>
-<input type="radio" id="tegangan" name="parameter" value="V" onchange="toggleInput()">
-<label for="tegangan">Tegangan (V)</label><br>
+    <br><br><br>
 
-<!-- Input untuk Arus -->
-<div id="inputArus" style="display: none;">
-    <label for="nilaiArus">Masukkan Arus (I): </label>
-    <input type="number" id="nilaiArus" placeholder="Masukkan nilai arus (I)">
-</div>
+    <!-- Konten Utama -->
+    <div class="container">
+        <h2>Form Perhitungan Rangkaian Seri</h2>
+       <br><br>
 
-<!-- Input untuk Tegangan -->
-<div id="inputTegangan" style="display: none;">
-    <label for="nilaiTegangan">Masukkan Tegangan (V): </label>
-    <input type="number" id="nilaiTegangan" placeholder="Masukkan nilai tegangan (V)">
-    <!-- Tombol untuk menghitung hasil -->
-    <button onclick="hitungHasil()">Hitung Hasil</button>
+        <!-- Dropdown untuk memilih jumlah hambatan -->
+        <div class="form-group">
+            <label for="jumlahinput">Pilih Jumlah Hambatan:</label>
+            <select id="jumlahinput" onchange="generateInput()">
+                <option value="">--Pilih Jumlah--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+<br>
+        <!-- Kontainer Input Hambatan -->
+        <div id="InputContainer" class="input-container"></div>
+
+        <!-- Pilihan Arus / Tegangan -->
+        <fieldset>
+            <legend>Pilih Parameter:</legend>
+            <input type="radio" id="arus" name="parameter" value="I" onchange="toggleInput()">
+            <label for="arus">Arus (I)</label><br><br>
+            <input type="radio" id="tegangan" name="parameter" value="V" onchange="toggleInput()">
+            <label for="tegangan">Tegangan (V)</label><br><br>
+        </fieldset>
+
+        <!-- Input untuk Arus -->
+        <div id="inputArus" class="hidden">
+            <label for="nilaiArus">Masukkan Arus (I):</label>
+            <input type="number" id="nilaiArus" placeholder="Masukkan nilai arus (I)">
+        </div>
+
+        <!-- Input untuk Tegangan -->
+        <div id="inputTegangan" class="hidden">
+            <label for="nilaiTegangan">Masukkan Tegangan (V):</label>
+            <input type="number" id="nilaiTegangan" placeholder="Masukkan nilai tegangan (V)">
+        </div>
+<br>
+        <!-- Tombol -->
+        <button onclick="hitungHasil()">Hitung Hasil</button>
+
+        <!-- Output Hasil -->
+        <div id="outputSection" class="output-section">
+            <h3>Hasil Perhitungan:</h3>
+            <p id="output"></p>
+        </div>
+    </div>
     
-    <!-- Menampilkan output hasil -->
-    <p id="output"></p>       
-
+    <!-- Footer -->
+   
 </body>
+
+<br><br><br> <br><br><br>
+
+
+<body>
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+			<div class="footer-right">
+                <h3 id = "kontak">Kontak</h3>
+                <p>Email: dimasduta05@upi.edu</p>
+                <p>Telepon: 0822-xxx-xxxx</p>
+				<p>Alamat: Bandung, Universitas Pendidikan Indonesia</p>
+            </div>
+
+
+            <div class="footer-left">
+                <h3>Tentang Kami</h3>
+                <p>Ini merupakan projek dari mata kuliah Algoritma dan Pemrograman(p+) .</p>
+            </div>
+            
+            
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Hak Cipta.</p>
+        </div>
+    </footer>
+</body>
+
+
+
 </html>
