@@ -1,20 +1,33 @@
 <!DOCTYPE html>
-
 <html lang="id">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Calculectric</title>
-    <script src=" algo.js"></script>
+    <script src="../JS/algoseri.js"></script>
+    <link rel="stylesheet" href=" ../CSS/style seri.css">
 </head>
 
 <body>
-    <h2>Form Perhitungan</h2> <a href="struktur web.html">Beranda</a>
+    <!-- Navbar -->  
+     <nav>
+        <div class="jeki">
+            <img src="../gambar/logo CALCURATIC.jpg" alt="Logo TE">
+        </div>
+        <ul>
+            <li><a href="../HTML/struktur kalkulator.html">Beranda</a></li>
+            <li><a href="../HTML/struktur kalkulator.html">Rangkaian Listrik</a></li>
+            <li><a href="../HTML/struktur kalkulator.html">Kontak</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+    <h2>Form Perhitungan Rangkaian Paralel</h2>
     
     <!-- Dropdown untuk memilih jumlah hambatan -->
-    <label for="jumlahinput">Pilih Jumlah Hambatan</label>
-    <select id="jumlahinput" onchange="generateInput()">
+    <div class="form-group">
+        <label for="jumlahinput">Pilih Jumlah Hambatan</label>
+        <select id="jumlahinput" onchange="generateInput()">
         <option value=""> --Pilih Jumlah-- </option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -22,31 +35,74 @@
         <option value="4">4</option>
         <option value="5">5</option>
     </select>
-    
-    <!-- Container untuk menampilkan input hambatan -->
-    <div id="InputContainer"></div>
-
-    <!-- Pilih arus/tegangan -->
-  <input type="radio" id="arus" name="parameter" value="I" onchange="toggleInput()">
-<label for="arus">Arus (I)</label><br>
-<input type="radio" id="tegangan" name="parameter" value="V" onchange="toggleInput()">
-<label for="tegangan">Tegangan (V)</label><br>
-
-<!-- Input untuk Arus -->
-<div id="inputArus" style="display: none;">
-    <label for="nilaiArus">Masukkan Arus (I): </label>
-    <input type="number" id="nilaiArus" placeholder="Masukkan nilai arus (I)">
 </div>
 
-<!-- Input untuk Tegangan -->
-<div id="inputTegangan" style="display: none;">
-    <label for="nilaiTegangan">Masukkan Tegangan (V): </label>
-    <input type="number" id="nilaiTegangan" placeholder="Masukkan nilai tegangan (V)">
+       
+    <br>
+    <!-- Container untuk menampilkan input hambatan -->
+    <div id="InputContainer"  class="input-container"></div>
+
+    <!-- Pilih arus/tegangan -->
+    <fieldset>
+        <legend>Pilih Parameter:</legend>
+        <input type="radio" id="arus" name="parameter" value="I" onchange="toggleInput()">
+        <label for="arus">Arus (I)</label><br>
+        <input type="radio" id="tegangan" name="parameter" value="V" onchange="toggleInput()">
+        <label for="tegangan">Tegangan (V)</label><br>
+    </fieldset>
+    <!-- Input untuk Arus -->
+    <div id="inputArus" style="display: none;">
+        <label for="nilaiArus">Masukkan Arus (I): </label>
+        <input type="number" id="nilaiArus" placeholder="Masukkan nilai arus (I)">
+    </div>
+
+    <!-- Input untuk Tegangan -->
+    <div id="inputTegangan" style="display: none;">
+        <label for="nilaiTegangan">Masukkan Tegangan (V): </label>
+        <input type="number" id="nilaiTegangan" placeholder="Masukkan nilai tegangan (V)">
+    </div>
     <!-- Tombol untuk menghitung hasil -->
     <button onclick="hitungHasil()">Hitung Hasil</button>
-    
+    <!-- Output Hasil -->
+    <div id="outputSection" class="output-section">
+        <h3>Hasil Perhitungan:</h3>
+        <p id="output"></p>
+    </div>
     <!-- Menampilkan output hasil -->
-    <p id="output"></p>       
+    <p id="output"></p>
+</div>
+ <!-- Footer -->
 
 </body>
+
+<br><br><br> <br><br><br>
+
+
+<body>
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+			<div class="footer-right">
+                <h3 id = "kontak">Kontak</h3>
+                <p>Email: dimasduta05@upi.edu</p>
+                <p>Telepon: 0822-xxx-xxxx</p>
+				<p>Alamat: Bandung, Universitas Pendidikan Indonesia</p>
+            </div>
+
+
+            <div class="footer-left">
+                <h3>Tentang Kami</h3>
+                <p>Ini merupakan projek dari mata kuliah Algoritma dan Pemrograman(p+) .</p>
+            </div>
+
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Hak Cipta.</p>
+        </div>
+    </footer>
+</body>
+
 </html>
