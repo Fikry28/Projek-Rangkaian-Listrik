@@ -7,7 +7,7 @@ HEAD{
     
    
     padding: 0;
-    margin: 0;
+    
     box-sizing: border-box;
 
 
@@ -85,9 +85,21 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 
-    
+.backround {
+    background-image: url(../gambar/backround.jpg);
+    background-size: cover;
 
+}
 
+#seri :hover {
+    color: #dd7c06;
+    border-bottom: 2px solid #dd7c06;
+}
+
+#pararel :hover{
+    color: #dd7c06;
+    border-bottom: 2px solid #dd7c06;
+}
 
 
 
